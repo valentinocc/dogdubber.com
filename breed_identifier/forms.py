@@ -1,6 +1,7 @@
 from django import forms
+from .models import DogPicture
 
 class PictureUploadForm(forms.ModelForm):
 	class Meta:
 		model = DogPicture
-		field = ['image']
+		fields = ['image']
