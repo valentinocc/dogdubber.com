@@ -19,8 +19,6 @@ def home(request):
 		'breed' : breed
 		}
 
-		print(area)
-
 		return render(request, 'breed_identifier/home.html', context)
 
 	else:
