@@ -90,17 +90,25 @@ a.article-title:hover {
   background-color: rgba(255, 255, 255, 0.3);
   background-blend-mode: lighten;
   height:100vh;
+  display: block;
 }
 
 .homepage-image-text {
   text-align: center;
-  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
 }
 
 .homepage-image-text h1 {
   text-decoration: underline;
-  top: 50%;
-  transform: translateY(2000%);
+  color: white;
+}
+
+.homepage-image-text h3 {
+  color: white;
 }
 
 .navbar {
