@@ -82,3 +82,27 @@ a.article-title:hover {
 .account-heading {
   font-size: 2.5rem;
 }
+
+.homepage-image {
+  background-image: url(homepage_dog_pic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.3);
+  background-blend-mode: lighten;
+  height:100vh;
+}
+
+.homepage-image-text {
+  text-align: center;
+  display: block;
+}
+
+.homepage-image-text h1 {
+  text-decoration: underline;
+  top: 50%;
+  transform: translateY(2000%);
+}
+
+.navbar {
+  margin-bottom: 0px !important;
+}

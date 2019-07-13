@@ -1,6 +1,11 @@
 {% extends "breed_identifier/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
+	<div class="homepage-image">
+		<div class="homepage-image-text">
+			<h1>Name your doge</h1>
+		</div>
+	</div>
 	<div class="content-section">
 		<form method="POST" enctype="multipart/form-data">
 			{% csrf_token %}
