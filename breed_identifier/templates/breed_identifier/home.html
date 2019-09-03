@@ -1,6 +1,15 @@
 {% extends "breed_identifier/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
+
+	{% if display_breed %}
+		<script type="text/javascript">
+			setTimeout(function () {
+            	window.scrollTo(0, 1500);
+        	},2);
+	    </script>
+	{% endif %}
+
 	<div class="homepage-image">
 		<div class="homepage-image-text">
 			<h1>Dog Dubber</h1>
