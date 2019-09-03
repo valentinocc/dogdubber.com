@@ -31,16 +31,17 @@ ul {
 .content-section {
   background: #ffffff;
   padding: 10px 20px;
-  border: 1px solid #dddddd;
+  border: 5px solid #dddddd;
   border-radius: 3px;
-  margin-bottom: 20px;
+  margin: 20px;
+
 }
 
 .article-title {
   color: #444444;
 }
 
-a.article-title:hover {
+.article-title:hover {
   color: #428bca;
   text-decoration: none;
 }
@@ -109,6 +110,17 @@ a.article-title:hover {
 
 .homepage-image-text h3 {
   color: white;
+}
+
+.homepage-upload {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  top: 125vh;
+  margin-top: 50vh;
+  padding-bottom: 45vh;
 }
 
 .navbar {

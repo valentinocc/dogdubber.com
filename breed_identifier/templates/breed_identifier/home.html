@@ -7,21 +7,21 @@
 			<h3>Upload a dog pic below to see what breed it is!
 		</div>
 	</div>
-	<div class="content-section">
-		<form method="POST" enctype="multipart/form-data">
+	<div class="homepage-upload">
+		<form method="POST" enctype="multipart/form-data" id="dog_picture_form">
 			{% csrf_token %}
 			<fieldset class="form-group">
-				<legend class="border-bottom mb-4">Upload a dog pic!</legend>
-				{{ picture_form|crispy }}
+				<h1 class="border-bottom mb-4">Upload</h1>
+				{{ picture_form }}
 			</fieldset>
 			<div class="form-group">
 				<button class="btn btn-outline-info" type="submit">Upload</button>
 			</div>
 		</form>
 		<div>
-		
-			<h1>Breed: {{ breed }}</h1>
-		
+			{% if display_breed %}
+				<h1>That dog looks like a {{breed}}!</h1>
+			{% endif %}
 		</div>
 	</div>
 {% endblock content %}

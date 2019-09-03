@@ -16,7 +16,8 @@ def home(request):
 
 		context = {
 		'picture_form' : picture_form,
-		'breed' : breed
+		'breed' : breed,
+		'display_breed': True
 		}
 
 		return render(request, 'breed_identifier/home.html', context)
@@ -25,7 +26,8 @@ def home(request):
 		picture_form = PictureUploadForm()
 
 	context = {
-		'picture_form' : picture_form
+		'picture_form' : picture_form,
+		'display_breed': False
 	}
 
 

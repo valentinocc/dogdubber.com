@@ -1,4 +1,17 @@
 {% extends "breed_identifier/base.html" %}
 {% block content %}
-	<h1>About</h1>
+	<div class="content-section">
+		<div>
+			<h1 class="article-title">About</h1>
+			<br>
+		</div>
+		<div>
+			<h4>What frameworks were used to build DogDubber.com?</h4>
+			<p class="article-content">DogDubber.com was created using the Django and Pytorch frameworks</p>
+			<h4>How does the website recognize which breed the dog is?</h4>
+			<p class="article-content">Pytorch was used to tune a pre-trained mobilenet_v2 model. This model was then loaded into the website to classify the images uploaded into a dog breed</p>
+			<h4>What are the shortcomings of this model?</h4>
+			<p>Only 120 dog breeds can be recongized even though more breeds exist. Also, the model's accuracy varies based on the dog's position in the image.</p>
+		</div>
+	</div>
 {% endblock content %}
