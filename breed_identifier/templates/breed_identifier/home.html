@@ -1,12 +1,11 @@
 {% extends "breed_identifier/base.html" %}
-{% load crispy_forms_tags %}
 {% block content %}
 
 	{% if display_breed %}
 		<script type="text/javascript">
 			setTimeout(function () {
             	window.scrollTo(0, 1500);
-        	},2);
+        	},0.05);
 	    </script>
 	{% endif %}
 
@@ -29,7 +28,7 @@
 		</form>
 		<div>
 			{% if display_breed %}
-				<h1>That dog looks like a {{breed}}!</h1>
+				<h1> {{ dog_name }} looks like a {{ breed }}!</h1>
 			{% endif %}
 		</div>
 	</div>

@@ -6,12 +6,26 @@
 			<br>
 		</div>
 		<div>
-			<h4>What frameworks were used to build DogDubber.com?</h4>
-			<p class="article-content">DogDubber.com was created using the Django and Pytorch frameworks</p>
+			<h4>What was used to build DogDubber.com?</h4>
+			<p class="article-content">DogDubber.com was created using the Django and Pytorch frameworks, SQLite for its database, Linode for hosting, and uses Apache2 as its web server.</p>
 			<h4>How does the website recognize which breed the dog is?</h4>
 			<p class="article-content">Pytorch was used to tune a pre-trained mobilenet_v2 model. This model was then loaded into the website to classify the images uploaded into a dog breed</p>
 			<h4>What are the shortcomings of this model?</h4>
 			<p>Only 120 dog breeds can be recongized even though more breeds exist. Also, the model's accuracy varies based on the dog's position in the image.</p>
+		</div>
+		<br>
+		<br>
+	</div>
+	<div class="content-section">
+		<div>
+			<h2 class="article-title">Update #1</h2>
+			<br>
+		</div>
+		<div>
+			<h4>What's new?</h4>
+			<p class="article-content">
+				You can now register as a user and see the dog pics you've uploaded on the profile page!!!! Some small errors were also fixed. There is still an issue with some image file types (like screenshots) not uploading properly, which will be patched in the next update. Stay tuned! 
+			</p>
 		</div>
 	</div>
 {% endblock content %}

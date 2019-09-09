@@ -1,0 +1,42 @@
+{% extends "breed_identifier/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+	<div class="content-section">
+		<div class="media">
+			<img class="rounded-circle account-img" src=" {{ user.profile.image.url }} ">
+			<div class="media-body">
+				<h2 class="account-heading"> {{ user.username }} </h2>
+				<h5> {{ user.profile.description }} </h5>
+			</div>
+		</div>
+		<form method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+			<fieldset class="form-group">
+				<legend class="border-bottom mb-4">Profile Info</legend>
+				{{ u_form|crispy }}
+				{{ p_form|crispy }}
+			</fieldset>
+			<div class="form-group">
+				<button class="btn btn-outline-info" type="submit">Update</button>
+			</div>
+		</form>
+	</div>
+	<div class="container mt-4 ml-7 mr-7">
+		<h1 class="text-center">Your dogs</h1>
+		<br>
+		<div class="card-deck">
+			{% for dog in dog_images %}
+				<script type="text/javascript">
+					setTimeout(0.005);
+	    		</script>
+				<div class="float-left card mt-1 ml-3 mr-3 mb-4" style="min-width: 18rem; max-width:18rem">
+						<img src=" {{ dog.image.url }} " class="card-img-top img-fluid rounded" alt="Uh oh, this pic is gone :(">
+						<div class="card-body">
+							<h5 class="card-title">{{ dog.dog_name }}</h5>
+							<p class="card-text">{{ dog.breed }}</p>
+						</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock content %}
